@@ -4,16 +4,16 @@ using UnityEngine;
 public class PlayerStartingPosition : MonoBehaviour
 {
     [SerializeField]
-    private Movement _movement;
+    private CharacterController _characterController;
 
     Vector3 _startingPosition;
 
-    IEnumerator Start()
+    void Start()
     {
+        _characterController.enabled = false;
         transform.position = _startingPosition;
+        _characterController.enabled = true;
         transform.LookAt(Vector3.zero);
-        yield return new WaitForSeconds(1f);
-        _movement.enabled = true;
     }
 
 
