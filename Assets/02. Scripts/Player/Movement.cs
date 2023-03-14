@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
 
     Vector2 _direction;
 
-    private void Awake()
+    public void Start()
     {
         _animator = GetComponentInChildren<Animator>();
     }
@@ -38,7 +38,10 @@ public class Movement : MonoBehaviour
         _characterController.SimpleMove(_speed * v3Direction);
         var lookat = transform.position + v3Direction;
         transform.LookAt(lookat);
-        _animator.SetFloat("Speed", _direction.magnitude);
-        _animator.SetFloat("SpeedY", _characterController.velocity.y);
+        if (_animator != null)
+        {
+            _animator.SetFloat("Speed", _direction.magnitude);
+            _animator.SetFloat("SpeedY", _characterController.velocity.y);
+        }
     }
 }
