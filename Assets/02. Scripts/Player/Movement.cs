@@ -8,7 +8,14 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float _speed = 1f;
 
+    private Animator _animator;
+
     Vector2 _direction;
+
+    private void Awake()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
 
     // When you press WASD or move the left joystick, save the direction you are pointing to
     public void Move(InputAction.CallbackContext ctx)
@@ -23,8 +30,16 @@ public class Movement : MonoBehaviour
     }
 
     // Each frame, move a little on the desired direction. Simple move also applies gravity.
+    // Then rotate to the direction
+    // Then send the data to the animator
     private void Update()
     {
-        _characterController.SimpleMove(_speed * new Vector3(_direction.x, 0f, _direction.y));
+        Vector3 v3Direction = new Vector3(_direction.x, 0f, _direction.y);
+        _characterController.SimpleMove(_speed * v3Direction);
+        var lookat = transform.position + v3Direction;
+        transform.LookAt(lookat);
+        _animator.SetFloat("Speed", _direction.magnitude);
+        _animator.SetFloat("SpeedY", _characterController.velocity.y);
+        
     }
 }
