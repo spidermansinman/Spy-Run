@@ -12,31 +12,31 @@ public class CoinSpawnManager : MonoBehaviour
     private float _timeBetweenSpawns = 3f;
 
     private List<Transform> _coinSpawnPositions;
-    private List<Transform> _tempSpawnPositions;
 
     private void Awake()
     {
         _coinSpawnPositions = new List<Transform>();
-        _tempSpawnPositions = new List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {
             _coinSpawnPositions.Add(transform.GetChild(i));
         }
     }
 
-    private Vector3 GetSpawnPosition()
+    private Transform GetSpawnPosition()
     {
-        if (_tempSpawnPositions.Count > 0)
+        if (_coinSpawnPositions.Count > 0)
         {
-            int index = Random.Range(0, _tempSpawnPositions.Count);
-            var pos = _tempSpawnPositions[index].position;
-            _tempSpawnPositions.RemoveAt(index);
-            return pos;
-        } else
-        {
-            _tempSpawnPositions = new List<Transform>(_coinSpawnPositions);
-            return GetSpawnPosition();
+            int index = Random.Range(0, _coinSpawnPositions.Count);
+            var t = _coinSpawnPositions[index];
+            _coinSpawnPositions.Remove(t);
+            return t;
         }
+        return null;
+    }
+
+    public void ReturnTransformToPool(Transform t)
+    {
+        _coinSpawnPositions.Add(t);
     }
 
     private void Start()
@@ -62,6 +62,24 @@ public class CoinSpawnManager : MonoBehaviour
 
     private void SpawnCoin()
     {
-        CoinSpawnPool.Instance.SpawnCoin(GetSpawnPosition());
+        Transform t = GetSpawnPosition();
+        if (t == null) return;
+        GameObject coin = CoinSpawnPool.Instance.SpawnCoin(t.position);
+        if (coin == null)
+        {
+            ReturnTransformToPool(t);
+            return;
+        }
+
+        var coinBehaviour = coin.GetComponent<CoinBehaviour>();
+        coinBehaviour.SetSpawnReference(t);
+        coinBehaviour.OnCoinGot += OnCoinGot;
+    }
+
+    private void OnCoinGot(CoinBehaviour coinBehaviour)
+    {
+        coinBehaviour.OnCoinGot -= OnCoinGot;
+        ReturnTransformToPool(coinBehaviour.SpawnReference);
+        CoinSpawnPool.Instance.ReturnToPool(coinBehaviour.gameObject);
     }
 }

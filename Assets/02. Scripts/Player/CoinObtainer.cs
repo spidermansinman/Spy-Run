@@ -15,8 +15,9 @@ public class CoinObtainer : MonoBehaviour
             // Add a coin and call everyone who listens to the coin being obtained
             _coins++;
             OnCoinObtained?.Invoke(_coins);
-            // Then destroy the coin
-            Destroy(other.gameObject);
+            // Then return the coin to the pool
+            CoinBehaviour coinBehaviour = other.GetComponent<CoinBehaviour>();
+            coinBehaviour.CoinGot();
         }
     }
 }

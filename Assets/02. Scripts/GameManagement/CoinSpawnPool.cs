@@ -27,13 +27,14 @@ public class CoinSpawnPool : MonoBehaviour
         _coinsInPool.Add(coinObject);
     }
 
-    public void SpawnCoin(Vector3 position)
+    public GameObject SpawnCoin(Vector3 position)
     {
-        if (_coinsInPool.Count == 0) return;
+        if (_coinsInPool.Count == 0) return null;
         GameObject coin = _coinsInPool[0];
         _coinsInPool.RemoveAt(0);
         coin.transform.SetParent(_coinsParent);
         coin.transform.position = position;
         coin.SetActive(true);
+        return coin;
     }
 }
