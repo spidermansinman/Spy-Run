@@ -40,6 +40,5 @@ public class Movement : MonoBehaviour
         transform.LookAt(lookat);
         _animator.SetFloat("Speed", _direction.magnitude);
         _animator.SetFloat("SpeedY", _characterController.velocity.y);
-        
     }
 }
