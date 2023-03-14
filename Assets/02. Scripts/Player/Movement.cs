@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
         {
             _animator.SetFloat("Speed", _direction.magnitude);
             _animator.SetFloat("SpeedY", _characterController.velocity.y);
+            _animator.SetBool("Grounded", _characterController.isGrounded);
         }
     }
 }
