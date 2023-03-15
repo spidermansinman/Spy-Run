@@ -11,6 +11,8 @@ public class CountSystem : MonoBehaviour
     private GameObject _winnerUIObject;
     [SerializeField]
     private GameObject _tieUIObject;
+    [SerializeField]
+    private GameObject _replayUI;
 
 
     private List<GameObject> _playerList = new List<GameObject>();
@@ -19,6 +21,7 @@ public class CountSystem : MonoBehaviour
     {
         _winnerUIObject.SetActive(false);
         _tieUIObject.SetActive(false);
+        _replayUI.SetActive(false);
         _virtualCamera.Priority = 0;
     }
 
@@ -70,5 +73,6 @@ public class CountSystem : MonoBehaviour
             _winnerUIObject.SetActive(true);
             current.GetComponentInChildren<Animator>().SetTrigger("Victory");
         }
+        _replayUI.SetActive(true);
     }
 }
