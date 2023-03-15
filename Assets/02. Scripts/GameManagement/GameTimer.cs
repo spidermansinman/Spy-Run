@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.InputSystem;
 
 public class GameTimer : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameTimer : MonoBehaviour
     public bool GameRunning => _running;
 
     private float _timer = 0f;
-    private bool _running = true;
+    private bool _running = false;
 
     void Awake()
     {
@@ -22,6 +23,24 @@ public class GameTimer : MonoBehaviour
             Destroy(gameObject);
         instance = this;
         _timer = _gameDuration;
+    }
+
+    private void OnEnable()
+    {
+        PlayerJoinNotifier.OnPlayerJoins += OnPlayerJoins;
+    }
+
+    private void OnDisable()
+    {
+        PlayerJoinNotifier.OnPlayerJoins -= OnPlayerJoins;
+    }
+
+    private void OnPlayerJoins(PlayerInput input)
+    {
+        if (!_running)
+        {
+            _running = true;
+        }
     }
 
     void Update()
