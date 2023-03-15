@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class CoinSpawnPool : MonoBehaviour
 {
-    public static CoinSpawnPool Instance;
-
     [SerializeField]
     private Transform _coinsParent;
 
@@ -13,7 +11,6 @@ public class CoinSpawnPool : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
         for(int i = 0; i < transform.childCount; i++)
         {
             _coinsInPool.Add(transform.GetChild(i).gameObject);

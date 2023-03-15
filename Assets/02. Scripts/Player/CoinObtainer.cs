@@ -6,6 +6,8 @@ public class CoinObtainer : MonoBehaviour
     public Action<int> OnCoinObtained;
     private int _coins = 0;
 
+    public int Coins => _coins;
+
     // When the player collides with a trigger
     private void OnTriggerEnter(Collider other)
     {

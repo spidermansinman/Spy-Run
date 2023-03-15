@@ -5,6 +5,8 @@ using UnityEngine;
 public class CoinSpawnManager : MonoBehaviour
 {
     [SerializeField]
+    private CoinSpawnPool _coinsPool;
+    [SerializeField]
     private int _startingCoins = 10;
     [SerializeField]
     private int _parallelSpawns = 1;
@@ -64,7 +66,7 @@ public class CoinSpawnManager : MonoBehaviour
     {
         Transform t = GetSpawnPosition();
         if (t == null) return;
-        GameObject coin = CoinSpawnPool.Instance.SpawnCoin(t.position);
+        GameObject coin = _coinsPool.SpawnCoin(t.position);
         if (coin == null)
         {
             ReturnTransformToPool(t);
@@ -80,6 +82,6 @@ public class CoinSpawnManager : MonoBehaviour
     {
         coinBehaviour.OnCoinGot -= OnCoinGot;
         ReturnTransformToPool(coinBehaviour.SpawnReference);
-        CoinSpawnPool.Instance.ReturnToPool(coinBehaviour.gameObject);
+        _coinsPool.ReturnToPool(coinBehaviour.gameObject);
     }
 }

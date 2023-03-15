@@ -10,7 +10,6 @@ public class MobilePlatform : MonoBehaviour
     [SerializeField]
     private float _waitTime;
 
-    private float _timer = 0f;
     private int _currentTravelPoint;
 
     void Start()
