@@ -20,13 +20,37 @@ public class Movement : MonoBehaviour
     // When you press WASD or move the left joystick, save the direction you are pointing to
     public void Move(InputAction.CallbackContext ctx)
     {
-        if (ctx.started || ctx.performed)
+        if (GameTimer.instance.GameRunning)
         {
-            _direction = ctx.ReadValue<Vector2>();
-        } else if (ctx.canceled)
+            if (ctx.started || ctx.performed)
+            {
+                _direction = ctx.ReadValue<Vector2>();
+            }
+            else if (ctx.canceled)
+            {
+                _direction = default;
+            }
+        } else
         {
             _direction = default;
         }
+    }
+
+    private void OnEnable()
+    {
+        GameTimer.OnTimerEnded += OnTimerEnded;
+    }
+
+    private void OnDisable()
+    {
+        GameTimer.OnTimerEnded -= OnTimerEnded;
+    }
+
+    private void OnTimerEnded()
+    {
+        _direction = default;
+        var lookat = transform.position + Vector3.back;
+        transform.LookAt(lookat);
     }
 
     // Each frame, move a little on the desired direction. Simple move also applies gravity.

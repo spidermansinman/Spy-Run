@@ -17,6 +17,20 @@ public class MobilePlatform : MonoBehaviour
         _currentTravelPoint = 0;
         StartCoroutine(Travel());
     }
+    private void OnEnable()
+    {
+        GameTimer.OnTimerEnded += OnTimerEnded;
+    }
+
+    private void OnDisable()
+    {
+        GameTimer.OnTimerEnded -= OnTimerEnded;
+    }
+
+    private void OnTimerEnded()
+    {
+        StopAllCoroutines();
+    }
 
     IEnumerator Travel()
     {

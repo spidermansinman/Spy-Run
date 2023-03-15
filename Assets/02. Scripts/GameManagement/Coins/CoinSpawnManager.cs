@@ -24,6 +24,21 @@ public class CoinSpawnManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameTimer.OnTimerEnded += OnTimerEnded;
+    }
+
+    private void OnDisable()
+    {
+        GameTimer.OnTimerEnded -= OnTimerEnded;
+    }
+
+    private void OnTimerEnded()
+    {
+        StopAllCoroutines();
+    }
+
     private Transform GetSpawnPosition()
     {
         if (_coinSpawnPositions.Count > 0)
