@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class CoinObtainer : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource _coinAudio;
+
     public Action<int> OnCoinObtained;
     private int _coins = 0;
 
@@ -20,6 +23,7 @@ public class CoinObtainer : MonoBehaviour
             // Then return the coin to the pool
             CoinBehaviour coinBehaviour = other.GetComponent<CoinBehaviour>();
             coinBehaviour.CoinGot();
+            if (_coinAudio != null) _coinAudio.Play();
         }
     }
 }
