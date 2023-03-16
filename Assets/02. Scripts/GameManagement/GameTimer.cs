@@ -8,21 +8,26 @@ public class GameTimer : MonoBehaviour
 
     [SerializeField]
     private float _gameDuration = 60f;
+    [SerializeField]
+    private float _preparationDuration = 5f;
 
     public static Action OnTimerEnded;
+    public static Action OnPreparationEnded;
 
     public float Timer => _timer;
     public bool GameRunning => _running;
+    public bool GamePreparing => _preparationRunning;
 
     private float _timer = 0f;
     private bool _running = false;
+    private bool _preparationRunning = false;
 
     void Awake()
     {
         if (instance != null)
             Destroy(gameObject);
         instance = this;
-        _timer = _gameDuration;
+        _timer = _preparationDuration;
     }
 
     private void OnEnable()
@@ -39,7 +44,7 @@ public class GameTimer : MonoBehaviour
     {
         if (!_running)
         {
-            _running = true;
+            _preparationRunning = true;
         }
     }
 
@@ -53,6 +58,16 @@ public class GameTimer : MonoBehaviour
                 _timer = 0f;
                 _running = false;
                 OnTimerEnded?.Invoke();
+            }
+        } else if (_preparationRunning)
+        {
+            _timer -= Time.deltaTime;
+            if (_timer <= 0f)
+            {
+                _preparationRunning = false;
+                _running = true;
+                OnPreparationEnded?.Invoke();
+                _timer = _gameDuration;
             }
         }
     }

@@ -8,7 +8,10 @@ public class TimerUI : MonoBehaviour
 
     private void Update()
     {
-        float timer = GameTimer.instance.Timer;
-        _timerText.text = timer.ToString("N0");
+        if (GameTimer.instance.GameRunning)
+        {
+            float timer = GameTimer.instance.Timer;
+            _timerText.text = timer.ToString("N0");
+        }
     }
 }
