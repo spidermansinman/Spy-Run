@@ -4,8 +4,10 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The character controller component, which moves the player")]
     private CharacterController _characterController = default;
     [SerializeField]
+    [Tooltip("The speed (in m/s) at which the players will move")]
     private float _speed = 1f;
 
     private Animator _animator;

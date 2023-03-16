@@ -2,7 +2,7 @@ using UnityEngine;
 using Cinemachine;
 using System.Collections;
 
-public class UpdateCam : MonoBehaviour
+public class FixCam : MonoBehaviour
 {
     [SerializeField]
     private CinemachineVirtualCamera _vcam;

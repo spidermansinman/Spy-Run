@@ -3,8 +3,10 @@ using UnityEngine;
 public class ObjectRotation : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The speed at which the object will rotate")]
     private float _rotationSpeed = 5f;
     [SerializeField]
+    [Tooltip("The vector which the object will rotate around")]
     private Vector3 _axis = Vector3.up;
 
     // Starts with a random rotation

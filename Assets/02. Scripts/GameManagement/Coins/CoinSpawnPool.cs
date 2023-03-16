@@ -4,6 +4,7 @@ using UnityEngine;
 public class CoinSpawnPool : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("Where will the coins be moved when retrieving them?")]
     private Transform _coinsParent;
 
     private List<GameObject> _coinsInPool = new List<GameObject>();

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerStartingPosition : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The character controller component, which moves the player")]
     private CharacterController _characterController;
 
     Vector3 _startingPosition;

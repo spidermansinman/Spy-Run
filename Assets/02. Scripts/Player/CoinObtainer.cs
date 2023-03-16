@@ -4,6 +4,7 @@ using UnityEngine;
 public class CoinObtainer : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The audio source with the coin sound")]
     private AudioSource _coinAudio;
 
     public Action<int> OnCoinObtained;

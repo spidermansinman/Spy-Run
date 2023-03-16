@@ -6,12 +6,16 @@ using Cinemachine;
 public class CountSystem : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The camera that will follow the winner")]
     private CinemachineVirtualCamera _virtualCamera;
     [SerializeField]
+    [Tooltip("The game object that will activate when there is a winner")]
     private GameObject _winnerUIObject;
     [SerializeField]
+    [Tooltip("The game object that will activate when there is a tie")]
     private GameObject _tieUIObject;
     [SerializeField]
+    [Tooltip("The game object that will always activate to allow the player to exit or replay")]
     private GameObject _replayUI;
 
 

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerGroupAdd : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] [Tooltip("This is the group of characters the camera will follow")]
     private CinemachineTargetGroup _targetGroup;
 
     private void OnEnable()

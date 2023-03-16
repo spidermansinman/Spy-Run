@@ -7,8 +7,10 @@ public class GameTimer : MonoBehaviour
     public static GameTimer instance;
 
     [SerializeField]
+    [Tooltip("How much time (in seconds) will the game last?")]
     private float _gameDuration = 60f;
     [SerializeField]
+    [Tooltip("How much time (in seconds) will the preparation phase (players joining) last")]
     private float _preparationDuration = 5f;
 
     public static Action OnTimerEnded;

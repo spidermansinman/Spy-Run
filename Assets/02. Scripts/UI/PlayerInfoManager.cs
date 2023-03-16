@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerInfoManager : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The list of objects that contain the UI for each player")]
     private PlayerInfo[] _playerInfoPanels;
 
     private void OnEnable()

@@ -4,10 +4,13 @@ using UnityEngine;
 public class MobilePlatform : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("Which points route will the object follow?")]
     private Transform[] _travelPoints;
     [SerializeField]
+    [Tooltip("How much time (in seconds) will take to go from a point to another?")]
     private float _travelTime;
     [SerializeField]
+    [Tooltip("How much time (in seconds) will take for an object to move again after arriving to a travel point?")]
     private float _waitTime;
 
     private int _currentTravelPoint;

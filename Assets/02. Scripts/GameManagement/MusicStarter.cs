@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicStarter : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The audio source with the music")]
     private AudioSource _musicSource;
 
     private void OnEnable()

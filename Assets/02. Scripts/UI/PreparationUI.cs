@@ -1,10 +1,10 @@
 using UnityEngine;
 using TMPro;
-using System;
 
 public class PreparationUI : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The text object that shows the remaining time to start the game")]
     private TextMeshProUGUI _timerText;
 
     private void OnEnable()

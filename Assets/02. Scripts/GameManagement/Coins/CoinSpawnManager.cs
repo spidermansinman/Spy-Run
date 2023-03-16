@@ -5,12 +5,16 @@ using UnityEngine;
 public class CoinSpawnManager : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The pool of coins from which to retrieve them")]
     private CoinSpawnPool _coinsPool;
     [SerializeField]
+    [Tooltip("How many coins will appear on start?")]
     private int _startingCoins = 10;
     [SerializeField]
+    [Tooltip("How many coins will appear at a time?")]
     private int _parallelSpawns = 1;
     [SerializeField]
+    [Tooltip("How much time will pass between coin spawns?")]
     private float _timeBetweenSpawns = 3f;
 
     private List<Transform> _coinSpawnPositions;
