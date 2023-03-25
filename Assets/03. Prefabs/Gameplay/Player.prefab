@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5768045366774765935}
   - component: {fileID: 4625688787454481470}
-  - component: {fileID: 7863056359884227116}
   - component: {fileID: 8661202689862182107}
   - component: {fileID: -1044256374443538322}
   - component: {fileID: 5595846625034703160}
   - component: {fileID: 1190529898427846707}
+  - component: {fileID: -8866788824090167601}
+  - component: {fileID: -8519614999060153307}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83,24 +84,6 @@ MonoBehaviour:
   m_DefaultActionMap: Game
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!143 &7863056359884227116
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853384140130326163}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8661202689862182107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f2fd6c2fdb4c54dae0ac8a867ecfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 7863056359884227116}
+  _rigidBody: {fileID: -8519614999060153307}
   _speed: 5
 --- !u!114 &-1044256374443538322
 MonoBehaviour:
@@ -140,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d73a27e635e014fb5efb7d02019d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 7863056359884227116}
 --- !u!114 &1190529898427846707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,8 +135,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388757bae49ee9441b738b309b393b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 7863056359884227116}
   _returnToPosition: {x: 0, y: 3, z: 0}
+--- !u!65 &-8866788824090167601
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853384140130326163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-8519614999060153307
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853384140130326163}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1 &6823653551064324011
 GameObject:
   m_ObjectHideFlags: 0
