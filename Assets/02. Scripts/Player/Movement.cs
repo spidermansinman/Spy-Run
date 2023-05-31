@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     private Animator _animator;
 
     Vector2 _direction;
+    public bool IsStunned { get; set; }
 
     public void Start()
     {
@@ -59,10 +60,13 @@ public class Movement : MonoBehaviour
     // Then rotate to the direction
     private void FixedUpdate()
     {
-        Vector3 v3Direction = new Vector3(_direction.x, 0f, _direction.y);
-        _rigidBody.MovePosition(transform.position + v3Direction * _speed * Time.fixedDeltaTime);
-        var lookat = transform.position + v3Direction;
-        transform.LookAt(lookat);
+        if (!IsStunned)
+        {
+            Vector3 v3Direction = new Vector3(_direction.x, 0f, _direction.y);
+            _rigidBody.MovePosition(transform.position + v3Direction * _speed * Time.fixedDeltaTime);
+            var lookat = transform.position + v3Direction;
+            transform.LookAt(lookat);
+        }
     }
 
     // Each frame send data to the animator depending on the desired direction and the vertical velocity

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1190529898427846707}
   - component: {fileID: -8866788824090167601}
   - component: {fileID: -8519614999060153307}
+  - component: {fileID: 6607739491745227891}
+  - component: {fileID: -3039491295999618403}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -79,6 +81,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c3e9dcfc-9b05-4480-9623-9ada0054c35a
     m_ActionName: Game/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6607739491745227891}
+        m_TargetAssemblyTypeName: PlayerHit, Assembly-CSharp
+        m_MethodName: Hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3d673b41-d95e-4107-864f-e576d470f492
+    m_ActionName: Game/Hit[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -165,6 +183,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &6607739491745227891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853384140130326163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ad3855fc1959644bfa9837ccc57235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxAngle: 50
+  _maxDistance: 2
+  _timeDelay: 2
+  _hitForce: 350
+--- !u!114 &-3039491295999618403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853384140130326163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f976d46f00a05fd449ce36a4d18495d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stunTime: 1
 --- !u!1 &6823653551064324011
 GameObject:
   m_ObjectHideFlags: 0
