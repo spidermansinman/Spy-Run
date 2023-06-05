@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinAudio: {fileID: 5821040610727002341}
+  _playerInput: {fileID: 0}
+  _pointsPerStandardCoin: 1
+  _pointsPerRelatedCoin: 3
 --- !u!114 &5595846625034703160
 MonoBehaviour:
   m_ObjectHideFlags: 0
