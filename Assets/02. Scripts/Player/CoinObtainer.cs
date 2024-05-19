@@ -26,5 +26,15 @@ public class CoinObtainer : MonoBehaviour
             coinBehaviour.CoinGot();
             if (_coinAudio != null) _coinAudio.Play();
         }
+        else if(other.gameObject.CompareTag("Coin+"))
+        {
+            // Add a coin and call everyone who listens to the coin being obtained
+            _coins = _coins + 3;
+            OnCoinObtained?.Invoke(_coins);
+            // Then return the coin to the pool
+            CoinBehaviour coinBehaviour = other.GetComponent<CoinBehaviour>();
+            coinBehaviour.CoinGot();
+            if (_coinAudio != null) _coinAudio.Play();
+        }
     }
 }
