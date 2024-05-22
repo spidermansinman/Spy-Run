@@ -116,9 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: -8519614999060153307}
-  _speed: 5
+  _speed: 8
   _taserSpeedMultiplier: 0.5
-  _taserDuration: 2
 --- !u!114 &-1044256374443538322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryObtainer: {fileID: 2414399529848401208}
-  _shotDelay: 5
+  _shotDelay: 4
   _taserPrefab: {fileID: 6156542097419917370, guid: c78277ca854828d47b4afec83c5c625a, type: 3}
   _forwardOffset: 2
   _taserAudio: {fileID: 0}
