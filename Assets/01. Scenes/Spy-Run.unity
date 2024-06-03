@@ -318,9 +318,9 @@ MonoBehaviour:
   - {fileID: 363690709}
   - {fileID: 2070380558}
   _characterPrefabs:
+  - {fileID: 1624156542300642755, guid: 716f6b7d0ca104df998936ff941c49df, type: 3}
+  - {fileID: 2974421165771874201, guid: 00f1c674a75ddcf409994faf4f616eae, type: 3}
   - {fileID: 8008742560308278189, guid: 53fe08d5f8bc15d44ad36be5e57049de, type: 3}
-  - {fileID: 5680685939112860665, guid: c02e14f1f38cd6143a771ed9310e9b72, type: 3}
-  - {fileID: 5054628684039633029, guid: d2214ffd15f82cd48a4b90515bee650e, type: 3}
   - {fileID: 5207098023798098211, guid: 6f56ec6139982414c9e875a18505ca41, type: 3}
 --- !u!4 &12176699
 Transform:
@@ -12976,6 +12976,10 @@ PrefabInstance:
     - target: {fileID: 3228610209473544370, guid: 9c666bac1dcdc7c4f9bc04f999dedb74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001442527496185959, guid: 9c666bac1dcdc7c4f9bc04f999dedb74, type: 3}
+      propertyPath: m_Name
+      value: Collider_Escenario
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5653953227751826578, guid: 9c666bac1dcdc7c4f9bc04f999dedb74, type: 3}
