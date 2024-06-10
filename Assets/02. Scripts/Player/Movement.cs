@@ -108,4 +108,9 @@ public class Movement : MonoBehaviour
         _lastStopped = Time.time;
         _stopDuration = time;
     }
+
+    public void OnCollisionEnter(Collision c)
+    {
+        Debug.Log(c.gameObject.name);
+    }
 }
