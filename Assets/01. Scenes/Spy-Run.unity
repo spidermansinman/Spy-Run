@@ -318,7 +318,7 @@ MonoBehaviour:
   - {fileID: 363690709}
   - {fileID: 2070380558}
   _characterPrefabs:
-  - {fileID: 2435617612135507647, guid: 9118e0aa0eae441f8aa363f52c712309, type: 3}
+  - {fileID: 3477330455115993133, guid: b211f58fc49e826449bc0c82c10ef7d3, type: 3}
   - {fileID: 2974421165771874201, guid: 00f1c674a75ddcf409994faf4f616eae, type: 3}
   - {fileID: 8008742560308278189, guid: 53fe08d5f8bc15d44ad36be5e57049de, type: 3}
   - {fileID: 5207098023798098211, guid: 6f56ec6139982414c9e875a18505ca41, type: 3}
