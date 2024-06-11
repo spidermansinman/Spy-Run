@@ -318,9 +318,9 @@ MonoBehaviour:
   - {fileID: 363690709}
   - {fileID: 2070380558}
   _characterPrefabs:
+  - {fileID: 8008742560308278189, guid: 53fe08d5f8bc15d44ad36be5e57049de, type: 3}
   - {fileID: 3477330455115993133, guid: b211f58fc49e826449bc0c82c10ef7d3, type: 3}
   - {fileID: 2974421165771874201, guid: 00f1c674a75ddcf409994faf4f616eae, type: 3}
-  - {fileID: 8008742560308278189, guid: 53fe08d5f8bc15d44ad36be5e57049de, type: 3}
   - {fileID: 5207098023798098211, guid: 6f56ec6139982414c9e875a18505ca41, type: 3}
 --- !u!4 &12176699
 Transform:
@@ -3240,15 +3240,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc7f13f75f25bdf4f9e0670d71e063bb, type: 2}
+  m_sharedMaterial: {fileID: -5065610893430308477, guid: bc7f13f75f25bdf4f9e0670d71e063bb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.1342479, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4785,15 +4785,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc7f13f75f25bdf4f9e0670d71e063bb, type: 2}
+  m_sharedMaterial: {fileID: -5065610893430308477, guid: bc7f13f75f25bdf4f9e0670d71e063bb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.20940065, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7742,28 +7742,28 @@ Transform:
   m_Children:
   - {fileID: 439183920}
   - {fileID: 933896982078506734}
-  - {fileID: 1876748133}
-  - {fileID: 1022559198}
-  - {fileID: 1934380958}
-  - {fileID: 1795020782}
   - {fileID: 1807758119}
   - {fileID: 191349179}
   - {fileID: 1283412711}
   - {fileID: 2123966959}
+  - {fileID: 1876748133}
   - {fileID: 1214579797}
   - {fileID: 1483994519}
   - {fileID: 152533116}
   - {fileID: 1471954633}
   - {fileID: 258210993}
+  - {fileID: 1934380958}
   - {fileID: 24779239}
   - {fileID: 687788414}
   - {fileID: 1990579265}
+  - {fileID: 1795020782}
   - {fileID: 935799308}
   - {fileID: 2074755301}
   - {fileID: 1874208376}
   - {fileID: 24644473}
   - {fileID: 1426273375}
   - {fileID: 378557191}
+  - {fileID: 1022559198}
   m_Father: {fileID: 551755786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1157460858
@@ -8806,7 +8806,7 @@ MonoBehaviour:
   _coinsPool: {fileID: 1157460858}
   _startingCoins: 4
   _parallelSpawns: 2
-  _timeBetweenSpawns: 5
+  _timeBetweenSpawns: 7
 --- !u!1001 &1331077950
 PrefabInstance:
   m_ObjectHideFlags: 0
