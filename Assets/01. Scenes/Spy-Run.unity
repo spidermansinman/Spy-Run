@@ -7407,12 +7407,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2222917022087456885, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000913282183858896, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413703271454356182, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413703271454356182, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340925734959862744, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6596691299495217086, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
       propertyPath: m_Name
       value: BatteryConfig
       objectReference: {fileID: 0}
+    - target: {fileID: 6878448229641693241, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7113338068931326280, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+    - {fileID: 5184810042463920534, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+    - {fileID: 4561263946429713155, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+    - {fileID: 8663018790125390727, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
+    - {fileID: 6974076081390738477, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbd85d06d6fe5654a993ad1e8c0d5acb, type: 3}
