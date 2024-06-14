@@ -50,6 +50,7 @@ MonoBehaviour:
   _rb: {fileID: 1424509295028047969}
   _duration: 1
   _speed: 20
+  _effectDuration: 10
 --- !u!135 &744127841569649076
 SphereCollider:
   m_ObjectHideFlags: 0
